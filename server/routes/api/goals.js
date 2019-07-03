@@ -4,7 +4,7 @@ const Goal = require('../models/goals.js');
 const app = express();
 
 app.get('/goals', (req, res) => {
-    Goal.find({}).exec((err, goals) => {
+    Goal.find({}).limit(2).exec((err, goals) => {
         if (err) {
             return res.status(400).json({
                 ok: false,
