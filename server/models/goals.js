@@ -9,8 +9,7 @@ let goalSchema = new Schema({
     description: String,
     timeLimit: String,
     date: {
-        type: Date,
-        default: Date.now
+        type: Number,
     }
 });
 
