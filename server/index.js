@@ -25,10 +25,10 @@ mongoose.connect('mongodb+srv://VictorJJF:Sed4cfv52309$@cluster0-ceisv.mongodb.n
     console.log('Base de datos ONLINE');
 });
 
-const users = require('./routes/api/user');
 const goals = require('./routes/api/goals');
-app.use('/api', users);
+const wimHof = require('./routes/api/wimHof');
 app.use('/api', goals);
+app.use('/api', wimHof);
 // app.use(require('./routes/api/user'));
 
 //Handle Production
